@@ -2,4 +2,3 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .venv/
-finalize_repo.sh
