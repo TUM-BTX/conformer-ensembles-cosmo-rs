@@ -1,0 +1,646 @@
+{
+  "molecule_1": {
+    "name": "1,2-propanediol",
+    "SMILES": "CC(O)CO",
+    "CAS": [
+      "57-55-6"
+    ],
+    "synonyms": [
+      "propylene glycol",
+      "1,2-Propylene glycol",
+      "Methylethylene glycol",
+      "Propylene Glycol",
+      "1,2-dihydroxypropane",
+      "propane-1,2-diol"
+    ]
+  },
+  "molecule_2": {
+    "name": "1,3-propanediamine",
+    "SMILES": "NCCCN",
+    "CAS": [
+      "109-76-2"
+    ],
+    "synonyms": [
+      "1,3-Diaminopropane",
+      "Propane-1,3-diamine",
+      "Trimethylenediamine",
+      "1,3-Propylenediamine"
+    ]
+  },
+  "molecule_3": {
+    "name": "1,3-propanediol",
+    "SMILES": "OCCCO",
+    "CAS": [
+      "504-63-2"
+    ],
+    "synonyms": [
+      "trimethylene glycol",
+      "Propane-1,3-diol",
+      "Trimethylene glycol",
+      "1,3-Dihydroxypropane",
+      "β-Propylene glycol",
+      "1,3-Propylene glycol"
+    ]
+  },
+  "molecule_4": {
+    "name": "1,4-butanediol",
+    "SMILES": "OCCCCO",
+    "CAS": [
+      "110-63-4"
+    ],
+    "synonyms": [
+      "Butane-1,4-diol",
+      "Tetramethylene glycol",
+      "1,4-Butylene glycol",
+      "1,4-Dihydroxybutane",
+      "Diol 14B"
+    ]
+  },
+  "molecule_5": {
+    "name": "1,5-pentanediol",
+    "SMILES": "OCCCCCO",
+    "CAS": [
+      "111-29-5"
+    ],
+    "synonyms": [
+      "Pentane-1,5-diol",
+      "1,5-Dihydroxypentane",
+      "Pentamethylene glycol",
+      "Pentylene glycol"
+    ]
+  },
+  "molecule_6": {
+    "name": "2,2-dimethyl-1,3-propanediol",
+    "SMILES": "CC(C)(CO)CO",
+    "CAS": [
+      "126-30-7"
+    ],
+    "synonyms": [
+      "neopentyl glycol",
+      "2,2-dimethylpropane-1,3-diol",
+      "Neopentyl glycol",
+      "Dimethylolpropane",
+      "Neopentanediol"
+    ]
+  },
+  "molecule_7": {
+    "name": "2,3-butanediol",
+    "SMILES": "CC(O)C(C)O",
+    "CAS": [
+      "513-85-9"
+    ],
+    "synonyms": [
+      "Butane-2,3-diol",
+      "Dimethylethylene glycol",
+      "2,3-Butylene glycol",
+      "2,3-Dihydroxybutane"
+    ]
+  },
+  "molecule_8": {
+    "name": "2,3-dihydroxybenzoic acid",
+    "SMILES": "O=C(O)c1cccc(O)c1O",
+    "CAS": [
+      "303-38-8"
+    ],
+    "synonyms": [
+      "2,3-dihydroxy-Benzoic acid",
+      "Pyrocatechuic acid",
+      "o-Pyrocatechuic acid",
+      "3-Hydroxysalicylic acid"
+    ]
+  },
+  "molecule_9": {
+    "name": "2,4-dihydroxybenzoic acid",
+    "SMILES": "O=C(O)c1ccc(O)cc1O",
+    "CAS": [
+      "89-86-1"
+    ],
+    "synonyms": [
+      "2,4-dihydroxy-Benzoic acid",
+      "beta-Resorcylic acid",
+      "4-Hydroxysalicylic acid",
+      "4-Carboxyresorcinol"
+    ]
+  },
+  "molecule_10": {
+    "name": "2,5-dihydroxybenzoic acid",
+    "SMILES": "O=C(O)c1cc(O)ccc1O",
+    "CAS": [
+      "490-79-9"
+    ],
+    "synonyms": [
+      "gentisic acid",
+      "2,5-dihydroxy-Benzoic acid",
+      "5-hydroxy-Salicylic acid",
+      "5-Hydroxysalicylic acid"
+    ]
+  },
+  "molecule_11": {
+    "name": "2-(dimethylamino)ethanol",
+    "SMILES": "CN(C)CCO",
+    "CAS": [
+      "108-01-0"
+    ],
+    "synonyms": [
+      "Deanol",
+      "2-(dimethylamino)-Ethanol",
+      "2-dimethylaminoethanol",
+      "N,N-Dimethylethanolamine"
+    ]
+  },
+  "molecule_12": {
+    "name": "2-(ethylamino)ethanol",
+    "SMILES": "CCNCCO",
+    "CAS": [
+      "110-73-6"
+    ],
+    "synonyms": [
+      "2-(ethylamino)-Ethanol",
+      "2-Ethylaminoethanol",
+      "Ethyl ethanolamine",
+      "N-Ethylmonoethanolamine"
+    ]
+  },
+  "molecule_13": {
+    "name": "2-acetamidobenzoic acid",
+    "SMILES": "CC(=O)Nc1ccccc1C(=O)O",
+    "CAS": [
+      "89-52-1"
+    ],
+    "synonyms": [
+      "2-(acetylamino)-Benzoic acid",
+      "n-acetylanthranilic acid",
+      "2-(Acetylamino)benzoic acid",
+      "2-Carboxyacetanilide"
+    ]
+  },
+  "molecule_14": {
+    "name": "2-amino-1,3-propanediol",
+    "SMILES": "OCC(N)CO",
+    "CAS": [
+      "534-03-2"
+    ],
+    "synonyms": [
+      "serinol",
+      "2-aminopropane-1,3-diol",
+      "Serinol",
+      "ic94l30j8m",
+      "2-Amino-1,3-propandiol"
+    ]
+  },
+  "molecule_15": {
+    "name": "2-amino-2-methylpropan-1-ol",
+    "SMILES": "CC(C)(N)CO",
+    "CAS": [
+      "124-68-5"
+    ],
+    "synonyms": [
+      "2-Amino-2-methyl-1-propanol",
+      "2-Aminoisobutanol",
+      "Aminomethylpropanol",
+      "Isobutanol-2-amine"
+    ]
+  },
+  "molecule_16": {
+    "name": "2-aminoethanol",
+    "SMILES": "OCCN",
+    "CAS": [
+      "141-43-5"
+    ],
+    "synonyms": [
+      "ethanolamine",
+      "2-amino-Ethanol",
+      "Monoethanolamine",
+      "Ethanolamine",
+      "2-Hydroxyethylamine"
+    ]
+  },
+  "molecule_17": {
+    "name": "2-aminopropan-1-ol",
+    "SMILES": "CC(N)CO",
+    "CAS": [
+      "78-91-1"
+    ],
+    "synonyms": [
+      "alaninol",
+      "2-Amino-1-propanol",
+      "DL-2-Amino-1-propanol",
+      "(.+/-.)-2-amino-1-Propanol",
+      "2-amino-Propanol"
+    ]
+  },
+  "molecule_18": {
+    "name": "2-hydroxybenzamide",
+    "SMILES": "NC(=O)c1ccccc1O",
+    "CAS": [
+      "65-45-2"
+    ],
+    "synonyms": [
+      "salicylamide",
+      "2-hydroxy-Benzamide",
+      "o-Hydroxybenzamide",
+      "2-Carbamoylphenol"
+    ]
+  },
+  "molecule_19": {
+    "name": "3-aminopropan-1-ol",
+    "SMILES": "NCCCO",
+    "CAS": [
+      "156-87-6"
+    ],
+    "synonyms": [
+      "3-amino-1-propanol",
+      "3-amino-1-Propanol",
+      "Propanolamine",
+      "3-Aminopropanol",
+      "β-Alaninol"
+    ]
+  },
+  "molecule_20": {
+    "name": "8-hydroxyquinoline",
+    "SMILES": "Oc1cccc2cccnc12",
+    "CAS": [
+      "148-24-3"
+    ],
+    "synonyms": [
+      "quinolin-8-ol",
+      "8-hydroxy-Quinoline",
+      "8-quinolinol",
+      "Oxyquinoline"
+    ]
+  },
+  "molecule_21": {
+    "name": "acetohydroxamic acid",
+    "SMILES": "CC(=O)NO",
+    "CAS": [
+      "546-88-3"
+    ],
+    "synonyms": [
+      "N-hydroxyacetamide",
+      "n-hydroxy-acetamide",
+      "Acetylhydroxamic acid",
+      "Lithostat"
+    ]
+  },
+  "molecule_22": {
+    "name": "anthranilic acid",
+    "SMILES": "Nc1ccccc1C(=O)O",
+    "CAS": [
+      "118-92-3"
+    ],
+    "synonyms": [
+      "2-aminobenzoic acid",
+      "2-amino-Benzoic acid",
+      "o-amino-Benzoic acid",
+      "o-aminobenzoic acid"
+    ]
+  },
+  "molecule_23": {
+    "name": "benzohydroxamic acid",
+    "SMILES": "O=C(NO)c1ccccc1",
+    "CAS": [
+      "495-18-1"
+    ],
+    "synonyms": [
+      "N-hydroxybenzamide",
+      "N-hydroxy-Benzamide",
+      "Benzhydroxamic acid",
+      "Phenylhydroxamic acid"
+    ]
+  },
+  "molecule_24": {
+    "name": "catechol",
+    "SMILES": "Oc1ccccc1O",
+    "CAS": [
+      "120-80-9"
+    ],
+    "synonyms": [
+      "1,2-benzenediol",
+      "benzene-1,2-diol",
+      "o-dihydroxy-Benzene",
+      "pyrocatechol",
+      "1,2-dihydroxybenzene"
+    ]
+  },
+  "molecule_25": {
+    "name": "daphnetin",
+    "SMILES": "O=c1ccc2ccc(O)c(O)c2o1",
+    "CAS": [
+      "486-35-1"
+    ],
+    "synonyms": [
+      "7,8-dihydroxychromen-2-one",
+      "7,8-Dihydroxy-2H-1-benzopyran-2-one",
+      "7,8-dihydroxy-coumarin",
+      "7,8-Dihydroxycoumarin"
+    ]
+  },
+  "molecule_26": {
+    "name": "ethylene glycol",
+    "SMILES": "OCCO",
+    "CAS": [
+      "107-21-1"
+    ],
+    "synonyms": [
+      "1,2-ethanediol",
+      "1,2-Ethanediol",
+      "Glycol",
+      "ethylene-Glycol",
+      "Ethane-1,2-diol"
+    ]
+  },
+  "molecule_27": {
+    "name": "ethylenediamine",
+    "SMILES": "NCCN",
+    "CAS": [
+      "107-15-3"
+    ],
+    "synonyms": [
+      "1,2-ethanediamine",
+      "1,2-Ethanediamine",
+      "ethane-1,2-diamine",
+      "1,2-Diaminoethane",
+      "Dimethylenediamine",
+      "1,2-Ethylenediamine"
+    ]
+  },
+  "molecule_28": {
+    "name": "fenamic acid",
+    "SMILES": "O=C(O)c1ccccc1Nc1ccccc1",
+    "CAS": [
+      "91-40-7"
+    ],
+    "synonyms": [
+      "2-anilinobenzoic acid",
+      "N-phenyl-Anthranilic acid",
+      "2-anilino-benzoic acid",
+      "N-phenylanthranilic acid"
+    ]
+  },
+  "molecule_29": {
+    "name": "glycerol",
+    "SMILES": "OCC(O)CO",
+    "CAS": [
+      "56-81-5",
+      "25618-55-7"
+    ],
+    "synonyms": [
+      "1,2,3-propanetriol",
+      "Glycerin",
+      "1,2,3-Propanetriol",
+      "Glycerine",
+      "propane-1,2,3-triol"
+    ]
+  },
+  "molecule_30": {
+    "name": "glycine",
+    "SMILES": "NCC(=O)O",
+    "CAS": [
+      "56-40-6"
+    ],
+    "synonyms": [
+      "2-aminoacetic acid",
+      "amino-Acetic acid",
+      "aminoacetic acid",
+      "Aminoethanoic acid"
+    ]
+  },
+  "molecule_31": {
+    "name": "hydroquinone",
+    "SMILES": "Oc1ccc(O)cc1",
+    "CAS": [
+      "123-31-9"
+    ],
+    "synonyms": [
+      "1,4-benzenediol",
+      "benzene-1,4-diol",
+      "1,4-Dihydroxybenzene",
+      "Quinol"
+    ]
+  },
+  "molecule_32": {
+    "name": "kaempferol",
+    "SMILES": "O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12",
+    "CAS": [
+      "520-18-3"
+    ],
+    "synonyms": [
+      "3,5,7-trihydroxy-2-(4-hydroxyphenyl)chromen-4-one",
+      "3,5,7-Trihydroxy-2-(4-hydroxyphenyl)-4H-1-benzopyran-4-one",
+      "Kaempherol",
+      "Robigenin"
+    ]
+  },
+  "molecule_33": {
+    "name": "L-alaninol",
+    "SMILES": "C[C@H](N)CO",
+    "CAS": [
+      "2749-11-3"
+    ],
+    "synonyms": [
+      "(S)-2-aminopropan-1-ol",
+      "(2S)-2-aminopropan-1-ol",
+      "(2S)-2-amino-1-Propanol",
+      "(+)-2-Aminopropanol",
+      "(S)-2-Aminopropan-1-ol"
+    ]
+  },
+  "molecule_34": {
+    "name": "L-serine",
+    "SMILES": "N[C@@H](CO)C(=O)O",
+    "CAS": [
+      "56-45-1"
+    ],
+    "synonyms": [
+      "(2S)-2-amino-3-hydroxypropanoic acid",
+      "(S)-2-Amino-3-hydroxypropanoic acid",
+      "(S)-2-amino-3-hydroxy-Propanoic acid",
+      "3-hydroxy-L-Alanine"
+    ]
+  },
+  "molecule_35": {
+    "name": "L-threonine",
+    "SMILES": "C[C@@H](O)[C@H](N)C(=O)O",
+    "CAS": [
+      "72-19-5"
+    ],
+    "synonyms": [
+      "(2S,3R)-2-amino-3-hydroxybutanoic acid",
+      "(R-(R*,S*))-2-Amino-3-hydroxybutanoic acid",
+      "DL-Threonine",
+      "threonine"
+    ]
+  },
+  "molecule_36": {
+    "name": "L-tyrosine",
+    "SMILES": "N[C@@H](Cc1ccc(O)cc1)C(=O)O",
+    "CAS": [
+      "60-18-4"
+    ],
+    "synonyms": [
+      "(2S)-2-amino-3-(4-hydroxyphenyl)propanoic acid",
+      "4-Hydroxy-L-phenylalanine",
+      "(-)-alpha-Amino-p-hydroxyhydrocinnamic acid",
+      "(S)-alpha-Amino-4-hydroxybenzenepropanoic acid"
+    ]
+  },
+  "molecule_37": {
+    "name": "luteolin",
+    "SMILES": "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+    "CAS": [
+      "491-70-3"
+    ],
+    "synonyms": [
+      "2-(3,4-dihydroxyphenyl)-5,7-dihydroxychromen-4-one",
+      "2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4H-1-Benzopyran-4-one",
+      "3',4',5,7-Tetrahydroxy-Flavone",
+      "3',4',5,7-Tetrahydroxyflavone"
+    ]
+  },
+  "molecule_38": {
+    "name": "methyl 2-hydroxy-5-methylbenzoate",
+    "SMILES": "COC(=O)c1cc(C)ccc1O",
+    "CAS": [
+      "22717-57-3"
+    ],
+    "synonyms": [
+      "Methyl 5-methylsalicylate",
+      "Benzoic acid, 2-hydroxy-5-methyl-, methyl ester",
+      "2-Hydroxy-5-methylbenzoic acid methyl ester",
+      "8gmk8ql99v"
+    ]
+  },
+  "molecule_39": {
+    "name": "N-(2-hydroxyethyl)acetamide",
+    "SMILES": "CC(=O)NCCO",
+    "CAS": [
+      "142-26-7"
+    ],
+    "synonyms": [
+      "N-(2-hydroxyethyl)-Acetamide",
+      "N-Acetylethanolamine",
+      "2-Acetamidoethanol",
+      "Acetylcolamine"
+    ]
+  },
+  "molecule_40": {
+    "name": "N-benzyl-2-hydroxybenzamide",
+    "SMILES": "O=C(NCc1ccccc1)c1ccccc1O",
+    "CAS": [
+      "20919-36-2"
+    ],
+    "synonyms": [
+      "N-Benzyl-2-hydroxy-benzamide",
+      "n-benzylsalicylamide",
+      "2-hydroxy-N-(phenylmethyl)-Benzamide",
+      "(2-hydroxyphenyl)-N-benzylcarboxamide"
+    ]
+  },
+  "molecule_41": {
+    "name": "N-ethyl-2-hydroxybenzamide",
+    "SMILES": "CCNC(=O)c1ccccc1O",
+    "CAS": [
+      "4611-42-1"
+    ],
+    "synonyms": [
+      "N-ethyl-2-hydroxy-Benzamide",
+      "N-Ethylsalicylamide",
+      "Salicylethylamide",
+      "N-ethyl-Salicylamide"
+    ]
+  },
+  "molecule_42": {
+    "name": "naringenin",
+    "SMILES": "O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21",
+    "CAS": [
+      "67604-48-2"
+    ],
+    "synonyms": [
+      "5,7-dihydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one",
+      "5,7-Dihydroxy-2-(4-hydroxyphenyl)chroman-4-one",
+      "(+-)-naringenin",
+      "(+/-)-Naringenin",
+      "4',5,7-Trihydroxyflavanone"
+    ]
+  },
+  "molecule_43": {
+    "name": "p-hydroxyacetophenone",
+    "SMILES": "CC(=O)c1ccc(O)cc1",
+    "CAS": [
+      "99-93-4"
+    ],
+    "synonyms": [
+      "1-(4-hydroxyphenyl)ethanone",
+      "1-(4-hydroxyphenyl)-Ethanone",
+      "p-hydroxy-Acetophenone",
+      "4'-Hydroxyacetophenone",
+      "4-Hydroxyacetophenone"
+    ]
+  },
+  "molecule_44": {
+    "name": "pivalolactone",
+    "SMILES": "CC1(C)COC1=O",
+    "CAS": [
+      "1955-45-9"
+    ],
+    "synonyms": [
+      "3,3-dimethyloxetan-2-one",
+      "3,3-Dimethyl-2-oxetanone",
+      "Pivalic acid lactone",
+      "Dimethyl propiolactone"
+    ]
+  },
+  "molecule_45": {
+    "name": "quercetin",
+    "SMILES": "O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+    "CAS": [
+      "117-39-5"
+    ],
+    "synonyms": [
+      "2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxychromen-4-one",
+      "2-(3,4-Dihydroxyphenyl)-3,5,7-trihydroxy-4H-1-benzopyran-4-one",
+      "3,4',5,5',7-pentahydroxy-Flavone",
+      "Sophoretin"
+    ]
+  },
+  "molecule_46": {
+    "name": "resorcinol",
+    "SMILES": "Oc1cccc(O)c1",
+    "CAS": [
+      "108-46-3"
+    ],
+    "synonyms": [
+      "1,3-benzenediol",
+      "benzene-1,3-diol",
+      "m-hydroxy-Phenol",
+      "1,3-dihydroxy-Benzene",
+      "1,3-Benzenediol"
+    ]
+  },
+  "molecule_47": {
+    "name": "salicylhydroxamic acid",
+    "SMILES": "O=C(NO)c1ccccc1O",
+    "CAS": [
+      "89-73-6"
+    ],
+    "synonyms": [
+      "N,2-dihydroxybenzamide",
+      "N,2-dihydroxy-Benzamide",
+      "2-Hydroxybenzohydroxamic acid",
+      "sham"
+    ]
+  },
+  "molecule_48": {
+    "name": "salicylic acid",
+    "SMILES": "O=C(O)c1ccccc1O",
+    "CAS": [
+      "69-72-7"
+    ],
+    "synonyms": [
+      "2-hydroxybenzoic acid",
+      "2-hydroxy-Benzoic acid",
+      "hydroxy-Benzoic acid",
+      "o-hydroxy-benzoic acid"
+    ]
+  }
+}

@@ -15,6 +15,7 @@ particular is written to be reusable.
 | Directory | Contents |
 |---|---|
 | [`crenso/`](crenso/) | The CRENSO workflow: a driver that runs CREST conformer sampling followed by four CENSO refinement steps, plus the `censo2rc` configuration files defining the level of theory. |
+| [`molecule_sets/`](molecule_sets/) | The molecule sets used in each part of the study (names, SMILES, CAS, synonyms), and the literature references for the experimental LLE data. |
 
 Further analysis code will be added here.
 
