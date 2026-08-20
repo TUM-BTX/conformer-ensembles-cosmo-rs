@@ -1,7 +1,9 @@
 # conformer-ensembles-cosmo-rs
 
-Code and settings accompanying the paper on conformer ensemble generation for
-COSMO-RS.
+Code and settings accompanying the paper:
+
+> **The effect of conformer ensembles and their generation method on COSMO-RS
+> predictions of phase equilibria**
 
 This repository holds the scripts and configuration files needed to reproduce
 the calculations and analyses reported in the paper. It is a companion to the
