@@ -1,0 +1,56 @@
+# Python environment for the CRENSO workflow.
+#
+#   conda env create -f environment.yml
+#   conda activate crenso
+#
+# This file installs the PYTHON side only: RDKit, CENSO (which is a Python
+# package and must share an interpreter with RDKit), and two optional helpers.
+#
+# The quantum-chemistry programs are expected to be provided by you:
+#
+#   ORCA   required   proprietary, download from https://orcaforum.kofo.mpg.de/
+#                     and set `orcapath` in config/censo2rc*
+#   CREST  required   https://github.com/crest-lab/crest        (used: 3.0.2)
+#   xTB    required   https://github.com/grimme-lab/xtb         (used: 6.7.1)
+#   MolBar optional   only for --noreftopo; pins an older NumPy, so install it
+#                     in a SEPARATE environment
+#
+# Point CRENSO at them with, e.g.:
+#
+#   export CRENSO_CREST_BIN=/path/to/crest
+#   export CRENSO_XTB_BIN=/path/to/xtb
+#   export CRENSO_MOLBAR_BIN=/path/to/molbar
+#
+# If you would rather let conda supply CREST and xTB instead of building or
+# module-loading them yourself, uncomment the two lines marked below. They are
+# off by default because HPC sites usually provide tuned builds, and because
+# mixing a conda-installed xTB with a system ORCA can lead to MPI and
+# libstdc++ conflicts. ORCA always has to be installed separately.
+
+name: crenso
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.13
+  - rdkit=2025.03.3
+  - numpy=2.3
+
+  # Optional convenience: let conda provide the sampling programs.
+  # - crest=3.0.2
+  # - xtb=6.7.1
+
+  - pip
+  - pip:
+      # CENSO 2.1.4, installed from the GitHub tag.
+      #
+      # IMPORTANT: do not substitute `pip install censo`. PyPI only carries
+      # CENSO 3.x, whose configuration format differs from 2.x, and the
+      # config/censo2rc* files in this repository are 2.x files. Installing 3.x
+      # will not reproduce these settings.
+      - censo @ git+https://github.com/grimme-lab/CENSO.git@v2.1.4
+      # Optional: nicer output folder names (needs network access)
+      - PubChemPy==1.0.4
+      # Optional: repairs SMILES that RDKit cannot embed
+      - molecule-resolver==0.4.1
