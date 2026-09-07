@@ -8,16 +8,14 @@ ensemble (`CRENSOconf_final.xyz`) for a molecule given as a SMILES string or an
 XYZ structure:
 
 1. **CREST sampling** — GFN-FF metadynamics, optionally broadened by additional
-   runs with scaled dispersion (`-dispscal`) and with artificial charges, which
-   drive the search into regions a single run tends to miss.
+   runs with scaled dispersion (`-dispscal`) and with artificial charges.
 2. **CREST screening** — GFN-FF re-ranking, ensemble sorting, full GFN2
    optimization, and PCA/k-means clustering.
-3. **CENSO refinement** — four sequential calls: prescreening, screening,
+3. **CENSO refinement** — prescreening, screening,
    per-solvent optimization, and a final screening of the merged ensemble.
 4. **Final clustering** — CREST `--cregen` clustering on the CENSO-ranked
    ensemble.
 
-Optionally an xTB Hessian is run for the vibrational spectrum.
 
 ## Requirements
 
@@ -38,8 +36,7 @@ published results.
 
 ### Quantum-chemistry programs
 
-These are **installed by you**, not by the environment file, so that you can use
-your site's own builds:
+These must be installed by the user:
 
 | Program | Required | Version used | Where to get it |
 |---|---|---|---|
