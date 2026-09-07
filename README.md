@@ -1,13 +1,11 @@
 # conformer-ensembles-cosmo-rs
 
-Supporting code and calculation settings for our paper:
+Supporting code and calculation settings for the submission:
 
 > **The effect of conformer ensembles and their generation method on COSMO-RS
 > predictions of phase equilibria**
 
-Here we collect the scripts, settings, and molecule lists used in the study.
-The CRENSO workflow can also be used to generate and refine conformer ensembles
-for other molecules.
+This repository collects the main scripts, settings, and molecule lists used in the study.
 
 ## Contents
 
