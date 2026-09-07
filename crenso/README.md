@@ -1,60 +1,55 @@
 # CRENSO
 
-Automated conformer ensemble generation with [CREST](https://github.com/crest-lab/crest)
-and [CENSO](https://github.com/grimme-lab/CENSO).
+`crenso.py` uses [CREST](https://github.com/crest-lab/crest) and
+[CENSO](https://github.com/grimme-lab/CENSO) to generate conformer ensembles.
+It takes a SMILES string or an XYZ file and writes the final ensemble to
+`CRENSOconf_final.xyz`.
 
-`crenso.py` runs a complete conformer workflow and produces a final, clustered
-ensemble (`CRENSOconf_final.xyz`) for a molecule given as a SMILES string or an
-XYZ structure:
+The calculation has four steps:
 
-1. **CREST sampling** — GFN-FF metadynamics, optionally broadened by additional
-   runs with scaled dispersion (`-dispscal`) and with artificial charges.
-2. **CREST screening** — GFN-FF re-ranking, ensemble sorting, full GFN2
-   optimization, and PCA/k-means clustering.
-3. **CENSO refinement** — prescreening, screening,
-   per-solvent optimization, and a final screening of the merged ensemble.
-4. **Final clustering** — CREST `--cregen` clustering on the CENSO-ranked
-   ensemble.
-
+1. CREST searches for conformers using GFN-FF metadynamics. Optional runs use
+   scaled dispersion (`-dispscal`) and artificial charges.
+2. The conformers are ranked with GFN-FF, sorted, optimized with GFN2, and
+   grouped using PCA/k-means clustering.
+3. CENSO runs prescreening, screening, and optimization in each solvent. The
+   results are then combined and screened again.
+4. CREST `--cregen` clusters the CENSO-ranked ensemble.
 
 ## Requirements
 
 ### Python environment
+
+Run these commands from the repository root:
 
 ```bash
 conda env create -f environment.yml
 conda activate crenso
 ```
 
-This installs Python 3.13, RDKit and **CENSO 2.1.4** — the versions used for the
-published results.
+This installs Python 3.13, RDKit, and CENSO 2.1.4, as used in the paper.
+The configuration files in this repository require CENSO 2.x. The environment
+file installs version 2.1.4 from GitHub; these settings do not work with CENSO 3.x.
 
-> **CENSO must be 2.x.** `pip install censo` gives CENSO 3.x, whose
-> configuration format differs from 2.x; the `config/censo2rc*` files here are
-> 2.x files and will not work with it. `environment.yml` therefore installs
-> CENSO from the `v2.1.4` GitHub tag.
+### Other programs
 
-### Quantum-chemistry programs
+Install ORCA, CREST, and xTB separately. We used:
 
-These must be installed by the user:
+| Program | Version | Download |
+|---|---|---|
+| ORCA | 6.0.0 | [ORCA forum](https://orcaforum.kofo.mpg.de/) (licence acceptance required) |
+| CREST | 3.0.2 | [CREST on GitHub](https://github.com/crest-lab/crest) |
+| xTB | 6.7.1 | [xTB on GitHub](https://github.com/grimme-lab/xtb) |
 
-| Program | Required | Version used | Where to get it |
-|---|---|---|---|
-| ORCA | yes | 6.0.0 | [orcaforum.kofo.mpg.de](https://orcaforum.kofo.mpg.de/) (proprietary; licence acceptance required) |
-| CREST | yes | 3.0.2 | [crest-lab/crest](https://github.com/crest-lab/crest) or `conda install -c conda-forge crest=3.0.2` |
-| xTB | yes | 6.7.1 | [grimme-lab/xtb](https://github.com/grimme-lab/xtb) or `conda install -c conda-forge xtb=6.7.1` |
-| MolBar | no | — | Only for `--noreftopo`; install in a **separate** environment (it pins an older NumPy) |
+CREST and xTB can also be installed with conda. Uncomment their lines in
+`environment.yml`, or run `conda install -c conda-forge crest=3.0.2 xtb=6.7.1`.
 
-ORCA is reached through CENSO, so its location goes in `config/censo2rc*`
-(`orcapath`). CREST, xTB and MolBar are called directly and are found on `PATH`,
-or via the environment variables below.
-
-`environment.yml` has commented-out lines for `crest` and `xtb` if you would
-rather let conda provide them; ORCA always has to be installed separately.
+MolBar is only needed for `--noreftopo`. Install it in a separate environment
+because it requires an older NumPy version.
 
 ## Setup
 
-`crest`, `censo` and `xtb` are found on `PATH`. To point at specific builds:
+`crest`, `censo`, and `xtb` should be on your `PATH`. You can also set their
+locations explicitly:
 
 ```bash
 export CRENSO_CREST_BIN=/path/to/crest
@@ -63,9 +58,9 @@ export CRENSO_XTB_BIN=/path/to/xtb
 export CRENSO_MOLBAR_BIN=/path/to/molbar   # optional
 ```
 
-**You must edit `config/censo2rc*` before the first run.** The `[paths]` section
-of all four files points at the ORCA and xTB executables of the machine the
-paper was produced on:
+Before the first run, set the ORCA and xTB paths in all four
+`crenso/config/censo2rc*` files. The paths currently refer to the machine we used
+for the paper. Edit the `[paths]` section to match your installation:
 
 ```ini
 [paths]
@@ -74,11 +69,12 @@ xtbpath  = /path/to/xtb
 orcaversion = 6.0.0
 ```
 
-All other settings in those files reproduce the published protocol and should be
-left alone unless you intend to change the level of theory. See
-`config/README.md` for what each file controls.
+Keep the other settings to use the same calculation protocol as the paper.
+[config/README.md](config/README.md) describes the four files.
 
-## Usage
+## Running a calculation
+
+Run these examples from the `crenso/` directory:
 
 ```bash
 # From a SMILES string
@@ -92,25 +88,28 @@ python crenso.py --smiles "CC(=O)[O-]" --charge -1 \
     --censo-solvents h2o hexane aniline --tasks 4 --threads 8
 ```
 
-`python crenso.py --help` lists every option. Results are written to
-`<base-dir>/<folder-name>/`, together with a `timings_*.json` breakdown of the
-wall-clock cost of each step.
+`python crenso.py --help` lists all options. Results are saved in
+`<base-dir>/<folder-name>/`. The `timings_*.json` file records how long each
+step took.
 
 ### Useful options
 
-- `--crest-solvent` / `--censo-solvents` — ALPB solvent for the search, CPCM
-  solvent(s) for the refinement. Each CENSO solvent is optimized separately and
-  the results are merged before the final screening.
-- `--gentle 1..4` — progressively more restrained sampling for molecules that
-  fall apart during metadynamics.
-- `--noreftopo` — disable CREST's topology check and instead filter conformers
-  afterwards with MolBar. Useful when the reference topology check is too strict.
-- `--nci-mode` — CREST `--nci` for non-covalent complexes.
-- `--skip-conformer-search` — reuse an existing CREST ensemble in the folder and
-  go straight to CENSO.
-- `--steps part01,part2,sp` — run only some CENSO stages, for restarts.
+- `--crest-solvent` sets the ALPB solvent for the CREST search.
+- `--censo-solvents` sets the CPCM solvents for CENSO. Conformers are optimized
+  in each solvent, then combined for the final screening.
+- `--gentle 1..4` reduces the sampling intensity if molecules break apart during
+  metadynamics. Higher values apply stronger restrictions.
+- `--noreftopo` replaces CREST's topology check with a MolBar check after the
+  search. This can help if CREST's check rejects too many conformers.
+- `--nci-mode` turns on CREST's `--nci` option for non-covalent complexes.
+- `--skip-conformer-search` starts CENSO using an existing CREST ensemble in the
+  calculation folder.
+- `--steps part01,part2,sp` selects which CENSO stages to run, for example when
+  restarting a calculation.
 
-## Use as a library
+## Running from Python
+
+You can also call the workflow from a Python script:
 
 ```python
 from crenso import CRENSOgen, CrensoConfig
@@ -124,9 +123,10 @@ mol.screen()
 mol.create_ensemble("all")
 ```
 
-`CrensoConfig.from_dict()` also accepts a nested dictionary, so existing driver
-scripts keep working.
+Settings can also be passed as a nested dictionary using
+`CrensoConfig.from_dict()`.
 
 ## Citation
 
-If you use this code, please cite the accompanying paper (see `CITATION.cff`).
+If you use this code, please cite the accompanying paper (see
+[CITATION.cff](../CITATION.cff)).
